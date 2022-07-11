@@ -60,5 +60,5 @@ spring configuration file:
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 
-</bean>
+</beans>
 
