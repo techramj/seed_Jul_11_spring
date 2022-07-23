@@ -1,0 +1,112 @@
+1. create simple maven project:
+2. In pom.xml add below dependencies
+   	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+  
+3. add plugings
+    
+    <build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+					<configuration>
+						<verbose>true</verbose>
+						<source>1.7</source>
+						<target>1.7</target>
+						<showWarnings>true</showWarnings>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.3.1</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<path>/</path>
+						<contextReloadable>true</contextReloadable>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<finalName>check</finalName>
+	</build>
+  
+  
+ 4. pom.xml look like 
+ <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.easylearning</groupId>
+	<artifactId>servlet-demo1</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<name>servlet-demo1</name>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-web-api</artifactId>
+			<version>6.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+					<configuration>
+						<verbose>true</verbose>
+						<source>1.7</source>
+						<target>1.7</target>
+						<showWarnings>true</showWarnings>
+					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.3.1</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<path>/</path>
+						<contextReloadable>true</contextReloadable>
+					</configuration>
+				</plugin>
+
+			</plugins>
+			
+
+		</pluginManagement>
+		<finalName>check</finalName>
+	</build>
+
+</project>
+
+
+   
+
